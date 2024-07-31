@@ -1,5 +1,4 @@
 //! Çekilen değerler / Normal değerler, bir şeyler falan.
-
 let computerChangeImg = document.getElementById('computerPickImg'),
     computerChoice = "",
     playable = true,
