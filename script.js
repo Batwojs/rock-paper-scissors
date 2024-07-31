@@ -1,7 +1,7 @@
 //! Çekilen değerler / Normal değerler, bir şeyler falan.
 
 let computerChangeImg = document.getElementById('computerPickImg'),
-    computerChoice = "";
+    computerChoice = "",
     playable = true,
     godmodeSwitch = true,
     finalResult = "";
@@ -14,7 +14,14 @@ const cheatCode = document.getElementById("cheatCode"),
       godMode = document.querySelector(".godMode"),
       paper = document.getElementById("paper"),
       rock = document.getElementById("rock"),
-      scissors = document.getElementById("scissors");
+      scissors = document.getElementById("scissors"),
+      header = document.getElementById("header"),
+      circleBorder = document.querySelectorAll(".circleBorder"),
+      newCircleBorder = document.querySelectorAll(".newCircleBorder"),
+      finalBtn = document.querySelector('.button'), 
+      computerPickImg = document.getElementById('computerPickImg'),
+      computerPickText = document.getElementById('computerPickText'),
+      resultText = document.getElementById('result');
     
 
     //! Bilgisayarın rastgele sayı üretip, işlediği kısım.
@@ -109,13 +116,6 @@ let audioFunc = () => {
 
     //! Stil
 let styleFunc = () => {
-    let header = document.getElementById("header"),
-        circleBorder = document.querySelectorAll(".circleBorder"),
-        finalBtn = document.querySelector('.button'), 
-        computerPickImg = document.getElementById('computerPickImg'),
-        computerPickText = document.getElementById('computerPickText');
-        resultText = document.getElementById('result')
-
     if (playable === false) {
         header.style.fontSize = "0px";
 
@@ -132,21 +132,12 @@ let styleFunc = () => {
         computerPickText.style.translate = "-100px 35px"; 
         resultText.style.opacity = "1";
         resultText.style.transition = "7s";
-      
     };
-  
 }
 
 
     //! Oyunu tekrar başlatmak istediğimizdeki karşımıza çıkıcak olan stil.
 let repeatStyleFunc = () => {
-    let header = document.getElementById("header"),
-        newCircleBorder = document.querySelectorAll(".newCircleBorder"),
-        finalBtn = document.querySelector('.button'), 
-        computerPickImg = document.getElementById('computerPickImg'),
-        computerPickText = document.getElementById('computerPickText');
-        resultText = document.getElementById('result')
-
     if (playable === false) {
         header.style.fontSize = "46px";
 
@@ -171,7 +162,6 @@ let repeatStyleFunc = () => {
             playable = true;
             computerResult();
         }, "1000");
-
     };
 
     cheatCode.innerText = "Wait.."
